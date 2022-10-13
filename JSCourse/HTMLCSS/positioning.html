@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .parent {
+            height: 200vh;
+        }
+        .parent > div {
+            background-color: blue;
+            margin: 10px;
+            height: 40px;
+            font-size: 30px;
+            color: aliceblue;
+            padding: 20px;
+        }
+
+        .child1 {
+            background-color: rgb(43, 255, 0);
+            position: absolute;
+            left: 200px;
+        }
+
+        .child2 {
+            background-color: rgb(43, 255, 0);
+            position: fixed;
+        }
+    </style>
+    <div class="parent">
+        <div class="child1">One</div>
+        <div class="child2">Two</div>
+        <div class="child3">Three</div>
+    </div>
+</body>
+</html>
