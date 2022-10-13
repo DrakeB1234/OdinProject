@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --primary-color: #456;
+            --padding: 40px;
+        }
+
+        .parent {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .parent > .child {
+            background-color:var(--primary-color);
+            width: 100%;
+            padding: var(--padding);
+            color: white;
+            font-size: 3rem;
+            border: 2px solid black;
+        }
+
+        .text > .child {
+            font-size: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+    </div>
+    <div class="parent">
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+    </div>
+    <div class="parent text">
+        <div class="child">
+            <h1>TITLETITLETITLE</h1>
+            <p>This is some text.This is some text.This is some text.</p>
+        </div>
+        <div class="child">
+            <h1>TITLETITLETITLE</h1>
+            <p>This is some text.This is some text.This is some text.</p>
+        </div>
+        <div class="child">
+            <h1>TITLETITLETITLE</h1>
+            <p>This is some text.This is some text.This is some text.</p>
+        </div>
+        <div class="child">
+            <h1>TITLETITLETITLE</h1>
+            <p>This is some text.This is some text.This is some text.</p>
+        </div>
+    </div>
+</body>
+</html>
