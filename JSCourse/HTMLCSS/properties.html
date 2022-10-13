@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* scope on these custom properties are only in this class */
+        .error-modal {
+            --color-error-text: red;
+            --modal-border: 1px solid black;
+            --modal-font-size: calc(2rem + 5vw);
+
+            color: var(--color-error-text);
+            border: var(--modal-border);
+            font-size: var(--modal-font-size);
+        }
+
+        /* This is a global declaration of the variable, usuable anywhere in the CSS file */
+        :root {
+            --main-color: red;
+            --padding: 20px;
+        }
+
+        .root {
+            padding: var(--padding);
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-modal">Hello</div>
+    <div class="root">Hello</div>
+
+    <div class="container">
+        <p>You're now viewing this example with the <span class='theme-name'>dark</span> theme!</p>
+        <button class="theme-toggle">Toggle Theme</button>
+      </div>
+</body>
+</html>
