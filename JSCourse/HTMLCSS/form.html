@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            padding: 40px;
+            margin: 40px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .child {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .child > input {
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 18px;
+            margin: 0 0 20px 20px;
+            font-size: 18px;
+            align-self: flex-start;
+
+        }
+
+        .child > label {
+            font-size: 20px;
+            align-self: flex-start;
+
+        }
+
+        .child > input[name="message"] {
+            padding-bottom: 200px;
+            align-items: flex-start;
+        }
+
+        .parent > button {
+            height: 50px;
+            width: 250px;
+            font-size: 20px;
+            align-self: center;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <list>
+        <form  class="parent">
+            <div class="child">
+                <label for="name" class="child">Name:</label>
+                <input type="text" name="name" />
+            </div>
+
+            <div class="child">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" />
+            </div>
+
+            <div class="child">
+                <label for="message">Message:</label>
+                <input type="text" name="message" />
+            </div>
+            <button type="submit">Send your Message</button>
+        </form>
+    </list>
+    
+</body>
+</html>
