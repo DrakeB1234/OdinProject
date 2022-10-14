@@ -119,6 +119,11 @@ button[type="submit"] {
 
 /* error styling for form*/
 
+.child2 input:focus {
+    border: 1px solid rgb(0, 123, 255);
+    box-shadow: 0 5px 10px rgb(0, 0, 0,0.5);
+}
+
 .child2 input:invalid {
     border: 1px solid red;
 }
