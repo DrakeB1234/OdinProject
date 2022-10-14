@@ -5,30 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" ref="css.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css.css" />
 </head>
 <body>
-    <div class="parent">
-        <form>
-        <div class="child">
-            <label for="name">Name:</label>
-            <input type="text" name="name" minlength="5" maxlength="20" pattern="^[a-zA-Z\d]*$" title="Username must not have any special characters" required>
-        </div>
-        <div class="child">
-            <label for="pass">Password:</label>
-        <!-- pattern matches for at least one captial, one special, and one number-->
-            <input type="password" name="pass" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%&*]).{8,}$" title="Password must be at least 8 characters, have one captial letter, lowercase letter, number and a special character (#?!@$%&*)" required>
-        </div>
-        <div class="child">
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
-        </div>
-        <div class="child">
-            <label for="phonenum">Phone Number:</label>
-            <input type="text" name="phonenum" pattern="(\d{1}[\+])?(\d{3}[\-]?\d{3}[\-]?\d{4}[\-]?)" title="Please enter phone number in this format: 1+123-456-7890" required>
-        </div>
-        <button type="submit">Submit</button>
-        </form>
-    </div>
+
+    <main class="parent">
+        <main class="child1">
+            <div class="imageText">
+                <h1>ODIN</h1>
+            </div>
+            <img src="svg/diamond-sunset.svg">
+        </main>    
+        <main class="child2">
+            <div class="child">
+                <h1>This is not a real online service! You know you need something like this
+                    in your life to help you realize your deepest dreams.
+                    Sign up <em>now</em> to get started.
+                </h1>
+                <h1>
+                    You <em>know</em> you want to
+                </h1>
+            </div>
+            <form  class="parent" id="form1">
+                <h2>Let's do this!</h2>
+                <div class="child1">
+                    <div class="child2">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" name="fname" minlength="5" maxlength="20" pattern="^[a-zA-Z\d]*$" title="Username must not have any special characters" required>
+                    </div>
+                    <div class="child2">
+                        <label for="lname">LAST NAME</label>
+                        <input type="text" name="lname" minlength="5" maxlength="20" pattern="^[a-zA-Z\d]*$" title="Username must not have any special characters" required>        </div>
+                    </div>  
+                </div>
+                <div class="child1">
+                    <div class="child2">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="child2">
+                        <label for="phonenum">PHONE NUMBER</label>
+                        <input type="text" name="phonenum" pattern="(\d{1}[\+])?(\d{3}[\-]?\d{3}[\-]?\d{4}[\-]?)" title="Please enter phone number in this format: 1+123-456-7890" required>    
+                    </div>
+                </div>
+                <div class="child1">
+                    <div class="child2">
+                        <label for="pass">PASSWORD</label>
+                        <!-- pattern matches for at least one captial, one special, and one number-->
+                        <input type="password" name="pass" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%&*]).{8,}$" title="Password must be at least 8 characters, have one captial letter, lowercase letter, number and a special character (#?!@$%&*)" required>        
+                    </div>
+                    <div class="child2">
+                        <label for="cpass">CONFIRM PASSWORD</label>
+                        <!-- pattern matches for at least one captial, one special, and one number-->
+                        <input type="password" name="cpass" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%&*]).{8,}$" title="Password must be at least 8 characters, have one captial letter, lowercase letter, number and a special character (#?!@$%&*)" required>        
+                    </div>
+                </div>
+            </form>
+            <div class="child">
+                <button type="submit" form="form1" >Create Account</button>
+                <p>Already have an account? <strong>Log in</strong></p>    
+            </div>
+        </main>
+    </main>
 </body>
 </html>
