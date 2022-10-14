@@ -12,6 +12,8 @@
             border: 2px solid black;
             display: flex;
             flex-direction: column;
+
+            width: max(200px, 80%);
         }
 
         .child {
@@ -28,6 +30,11 @@
             font-size: 18px;
             align-self: flex-start;
 
+        }
+
+        .child > input:invalid, .child > textarea:invalid {
+            border: 1px solid red ;
+            background-color: rgb(251, 127, 127, 0.2);
         }
 
         .child > label {
