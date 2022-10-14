@@ -36,9 +36,12 @@
 
         }
 
-        .child > input[name="message"] {
-            padding-bottom: 200px;
-            align-items: flex-start;
+        .child > textarea {
+            font-size: 20px;
+            height: 350px;
+            width: 100%;
+            margin-left: 20px;
+            resize: none;
         }
 
         .parent > button {
@@ -62,16 +65,15 @@
 
             <div class="child">
                 <label for="email">E-mail:</label>
-                <input type="text" name="email" />
+                <input type="email" name="email" />
             </div>
 
             <div class="child">
                 <label for="message">Message:</label>
-                <input type="text" name="message" />
+                <textarea type="text" name="message"></textarea>
             </div>
             <button type="submit">Send your Message</button>
         </form>
     </list>
-    
 </body>
 </html>
