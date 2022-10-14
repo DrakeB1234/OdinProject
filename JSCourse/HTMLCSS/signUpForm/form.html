@@ -5,22 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="style" ref="css.css" />
+    <link rel="stylesheet" ref="css.css" />
 </head>
 <body>
     <div class="parent">
+        <form>
         <div class="child">
-
+            <label for="name">Name:</label>
+            <input type="text" name="name" minlength="5" maxlength="20" pattern="^[a-zA-Z\d]*$" title="Username must not have any special characters" required>
         </div>
         <div class="child">
-
+            <label for="pass">Password:</label>
+        <!-- pattern matches for at least one captial, one special, and one number-->
+            <input type="password" name="pass" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%&*]).{8,}$" title="Password must be at least 8 characters, have one captial letter, lowercase letter, number and a special character (#?!@$%&*)" required>
         </div>
         <div class="child">
-
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
         </div>
         <div class="child">
-
+            <label for="phonenum">Phone Number:</label>
+            <input type="text" name="phonenum" pattern="(\d{1}[\+])?(\d{3}[\-]?\d{3}[\-]?\d{4}[\-]?)" title="Please enter phone number in this format: 1+123-456-7890" required>
         </div>
+        <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
