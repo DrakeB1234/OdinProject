@@ -8,14 +8,17 @@
     <style>
         .container {
             display: grid;
-            font-size: 15px;
-            grid-template:50px 50px / 50px 50px;
-            grid-auto-rows: 50px;
-            gap:10px;
+            grid-template-columns: 200px 400px;
+            grid-auto-rows: 200px;
+            grid-gap: 20px;
         }
         
         .container > div {
+            width: 100%;
+            padding: 20px;
             border: 1px solid black;
+            font-size: 15px;
+            background-color: orange;
         }
     </style>
 </head>
@@ -25,11 +28,8 @@
         <div>Item2</div>
         <div>Item3</div>
         <div>Item4</div>
-        <!-- implictily added grid items, using auto-rows -->
-        <div>Item5</div>
-        <div>Item6</div>
-        <div>Item7</div>
-        <div>Item8</div>
+        <div>Item3</div>
+        <div>Item4</div>
     </div>
 </body>
 </html>
