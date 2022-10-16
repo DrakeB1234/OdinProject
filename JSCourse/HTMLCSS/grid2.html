@@ -10,6 +10,12 @@
         display: inline-grid;
         grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
         background-color: lightblue; 
+        grid-template-areas:
+            "living-room living-room living-room living-room living-room"
+            "living-room living-room living-room living-room living-room"
+            "bedroom bedroom . kitchen kitchen"
+            "bedroom bedroom bathroom kitchen kitchen"
+            "closet closet bathroom kitchen kitchen"    
         }
 
         .room {
@@ -19,28 +25,23 @@
         }
 
         #living-room {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        grid-area:  living-room;
         }
 
         #kitchen {
-            grid-column: 4 / 6;
-            grid-row: 3/6;
+        grid-area: kitchen;
         }
 
         #bedroom {
-            grid-area: 3/1 /5/4
+        grid-area: bedroom;
         }
 
         #bathroom {
-            /* grid-row-start / grid-column-start / grid-row-end / grid-column-end one line using grid-area. */
-            grid-area: 2 / 4 / 3 / 6;
+        grid-area: bathroom;
         }
 
         #closet {
-            grid-column: 1 / 4;
+        grid-area: closet;
         }
     </style>
 </head>
