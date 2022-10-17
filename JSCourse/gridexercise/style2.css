@@ -6,6 +6,12 @@
   .container {
     text-align: center;
   }
+
+  .container {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-auto-flow: 1fr / 1fr;
+  }
   
   .container div {
     padding: 15px;
@@ -17,6 +23,8 @@
   
   .header {
     background-color: #393f4d;
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
   }
   
   .menu ul,
@@ -26,6 +34,8 @@
   
   .sidebar {
     background-color: #FF7755;
+    grid-column: 1 / 2;
+    grid-row: 2 / 5
   }
   
   .sidebar .photo {
