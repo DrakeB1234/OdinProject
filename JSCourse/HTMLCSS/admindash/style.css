@@ -34,10 +34,20 @@ main.content {
 }
 
 .articleMain {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 1rem;
+    place-items: center;
+
     border: 1px solid red;
 }
 
 .articleSide {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    place-items: center;
+
     border: 1px solid red;
 }
 
