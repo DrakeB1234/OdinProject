@@ -4,14 +4,17 @@
 }
 
 main {
+    height: 100vh;
     font-size: 40pt;
 }
 
 main.content {
     display: grid;
+    grid-template: 1fr 1fr 10fr / 1fr 4fr;
 }
 
 .searchbar {
+    grid-column: 2;
     display: flex;
     justify-content: space-evenly;
 
@@ -27,7 +30,7 @@ main.content {
 
 .article {
     display: grid;
-    grid-template-columns: repeat(2, clamp(20%, 200px, 1fr));
+    grid-template-columns: 2fr 1fr;
 }
 
 .articleMain {
@@ -36,4 +39,15 @@ main.content {
 
 .articleSide {
     border: 1px solid red;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+
+    display: grid;
+    grid-template-rows: 1fr repeat(2, 2fr);
+    gap: 3rem;
+    background-color: rgb(51, 171, 235);
+    color: white;
 }
