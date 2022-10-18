@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+/* global variables */
+
+:root {
+    --accent-color: rgb(51, 171, 235);
+}
+
 main {
     height: 100vh;
     font-size: 40pt;
@@ -13,19 +19,68 @@ main.content {
     grid-template: 1fr 1fr 10fr / 1fr 4fr;
 }
 
+/* formatting for search bar */
 .searchbar {
     grid-column: 2;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
     border: 1px solid red;
+}
+
+/* styling for search bar on top */
+.searchbar :first-child input {
+    width: 20em;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: rgb(219, 231, 235);
+    border: none;
+    border-radius: 2rem;
+    font-size: 3rem;
+}
+
+.searchbar :first-child i {
+    padding-right: 2rem;
+    font-size: 30pt;
+}
+
+.searchbar img {
+    width: 60%;
+    border-radius: 50%;
 }
 
 .nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
     border: 1px solid red;
+}
+
+/* styling for image wrapper */
+
+.nav .imagewrapper {
+    display: flex;
+    align-items: center;
+}
+
+.imagewrapper img {
+    width: 30%;
+    padding: 2.5rem;
+    border-radius: 50%;
+}
+
+/* styling for rest of nav */
+
+.nav :nth-child(n + 2) button {
+    width: 14rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    margin: 1rem;
+    font-size: 2.2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 20%;
 }
 
 .article {
@@ -58,6 +113,6 @@ main.content {
     display: grid;
     grid-template-rows: 1fr repeat(2, 2fr);
     gap: 3rem;
-    background-color: rgb(51, 171, 235);
+    background-color: var(--accent-color);
     color: white;
 }
