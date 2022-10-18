@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-size: 40pt;
+}
+
+main.content {
+    display: grid;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-evenly;
+
+    border: 1px solid red;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    border: 1px solid red;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, clamp(20%, 200px, 1fr));
+}
+
+.articleMain {
+    border: 1px solid red;
+}
+
+.articleSide {
+    border: 1px solid red;
+}
