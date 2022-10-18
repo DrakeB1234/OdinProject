@@ -3,16 +3,12 @@
     padding: 0;
   }
 
-  body {
-    height: 100%;
-  }
   
   .container {
     text-align: center;
   }
 
   .container {
-    height: 100%;
     display: grid;
     grid-template: repeat(6, minmax(200px, 5%)) / repeat(5, minmax(200px, 1fr));
   }
