@@ -70,13 +70,15 @@ main.layoutGrid {
     grid-template-rows: 15% 85%;
 }
 
+/* styling for search bar */
+
 .mainGrid search {
     display: flex;
     flex-direction: column;
-    background-color: red;
 }
 
 search .searchList {
+    padding: 0.3rem;
     display: flex;
     align-items: center;
 }
@@ -87,7 +89,42 @@ search nav {
 }
 
 /* styling for image in search */
+
 .mainGrid search img {
-    width: 15%;
+    width: 10%;
     border-radius: 50%;
+}
+
+/* styling for nav bar */
+
+search .searchList:nth-child(n + 2) > div {
+    display: flex;
+    align-items: center;
+}
+
+search h1 {
+    margin-left: 0.4rem;
+    font-size: 10pt;
+}
+
+search h2 {
+    margin-left: 0.5rem;
+    font-size: 6pt;
+}
+
+/* styling for buttons in navbar */
+
+search .navbarBtns > button {
+    width: 5em;
+    height: 1.5em;
+    margin: 0 0.5rem 0 0.5rem;
+    background-color: var(--accent-color);
+    border: 0;
+    border-radius: 30%;
+}
+
+/* styling for main article */
+
+article {
+    background-color: var(--foreground-color);
 }
