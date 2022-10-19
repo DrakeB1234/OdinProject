@@ -26,7 +26,7 @@ main.layoutGrid {
 
 /* styling for sidebar grid layout */
 
-div.sidebarFlex {
+.sidebarFlex {
     display: flex;
     flex-direction: column;
     background-color: var(--accent-color);
@@ -44,7 +44,7 @@ div.sidebarFlex {
 }
 
 .sidebarFlex > div {
-    margin-top: 25%;
+    margin-top: 10%;
 }
 
 .sidebarList {
@@ -63,7 +63,31 @@ div.sidebarFlex {
     font-size: 7pt;
 }
 
+/* styling for maingrid content */
 
-div.mainGrid {
+.mainGrid {
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+
+.mainGrid search {
+    display: flex;
+    flex-direction: column;
     background-color: red;
+}
+
+search .searchList {
+    display: flex;
+    align-items: center;
+}
+
+search nav {
+    display: flex;
+    align-items: center;
+}
+
+/* styling for image in search */
+.mainGrid search img {
+    width: 15%;
+    border-radius: 50%;
 }
