@@ -1,21 +1,21 @@
-function groceryItem(category, item, amount){
-    this.category = category,
-    this.item = item,
-    this.amount = amount
+function Book (title, author, pages, read){
+    this.title = title,
+    this. author = author,
+    this.pages = pages,
+    this.read = read,
+
+    this.info = function() {
+        info = (title, " by ", author, ", ", pages);
+        if (read == true) {
+            info += "already read";
+        }
+        else {
+            info += "not read yet";
+        }
+        return (title, author, pages, read);
+    }
 }
 
-let groceryList = [];
+const TheHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, false);
 
-groceryList.push(new groceryItem('Veggie', 'Green Onions', 2));
-groceryList.push(new groceryItem('Fruit', 'Potato', 2));
-groceryList.push(new groceryItem('Frozen', 'Pizza', 2));
-
-console.log(groceryList);
-
-const found = groceryList.findIndex(function (e) { 
-    return e == "Potato"
-});
-
-groceryList.splice(found, 1);
-
-console.log(groceryList);
+TheHobbit.info();
