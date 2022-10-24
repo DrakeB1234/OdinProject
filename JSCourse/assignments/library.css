@@ -1,0 +1,91 @@
+body {
+    background-color: #B6D6CC;
+}
+
+main.main-container {
+    display: grid;
+    margin: 1em;
+    padding: 2em;
+    background-color: #74A4BC;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0 1em 0;
+    padding: 1em 0 1em 0;
+}
+
+.input-container > input {
+    width: 20em;
+    padding: 1em;
+    font-size: 1rem;
+    border: 0;
+    border-bottom: 1px solid #44605e;
+    background-color: #B6D6CC;
+}
+
+.input-container > label {
+    margin: 0.2em;
+    padding: 1em;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #44605e;
+}
+
+.input-container input[type="checkbox"] {
+    margin: 1em;
+    height: 1.5em;
+}
+
+.input-container > button {
+    width: 40%;
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 3% / 20%;
+    background-color: #29339B;
+    color: #B6D6CC;
+}
+
+.data-container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
+}
+
+#data-get .item-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: #B6D6CC;
+}
+
+#data-get .item-container > h2 {
+    font-size: 2rem;
+}
+
+#data-get .item-container > h3 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #44605e;
+}
+
+#data-get .item-container > button {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 1em;
+    font-size: 1.5rem;
+    border: 0;
+}
+
+#data-get .item-container > div.read-book {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+#data-get .item-container > div.read-book button {
+    padding: 0.5em;
+    border: 1px solid black;
+    margin-left: 2em;
+}
