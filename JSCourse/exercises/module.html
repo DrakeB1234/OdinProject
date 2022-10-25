@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="modules.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            font-size: 2rem;
+        }
+        button {
+            width: 10em;
+            margin-top: 1em;
+            padding: 0.5em;
+            font-size: 1rem;
+        }
+        #data-get {
+            display: grid;
+            width: 70%;
+            gap: 1em;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: rgb(91, 217, 91);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="add-name" />
+        <button id="add-button">Add</button>
+        <div id="data-get">
+            <h1>name</h1>
+        </div>
+    </div>
+</body>
+</html>
