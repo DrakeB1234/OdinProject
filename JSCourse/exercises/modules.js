@@ -1,10 +1,10 @@
 // myModule.sayName();
 
-const people = {
-    people: [],
-    template: $('#data-get').html(),
-    init: function () {
-        tj
-    }
+// const people = {
+//     people: [],
+//     template: $('#data-get').html(),
+//     init: function () {
+//         tj
+//     }
     
-}
+// }
