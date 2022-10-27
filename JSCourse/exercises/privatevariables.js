@@ -23,16 +23,22 @@
 //   counter(); 
 //   counter();
 
-const factoryFunction = (name, age) => {
-    return { name, age };
-};
+// const factoryFunction = (name, age) => {
+//     return { name, age };
+// };
 
-let name = [];
+// let name = [];
 
-name.push(factoryFunction('joey', 12));
-name.push(factoryFunction('mark', 34));
-name.push(factoryFunction('hailey', 122));
+// name.push(factoryFunction('joey', 12));
+// name.push(factoryFunction('mark', 34));
+// name.push(factoryFunction('hailey', 122));
 
-name.forEach((e) => {
-    console.log(e);
-});
+// name.forEach((e) => {
+//     console.log(e);
+// });
+
+// if (1 == 1){
+//     let a = "yep";
+// }
+
+// console.log(a);
