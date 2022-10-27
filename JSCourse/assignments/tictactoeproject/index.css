@@ -1,0 +1,77 @@
+/* global changes (reset) */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--foreground-color);
+}
+
+/* root variables */
+:root {
+    --darkest-color: #331420;
+    --dark-color: #A04668;
+    --medium-color: #ce6d8a;
+    --foreground-color: #f8f0fc;
+    --highlight-color: #f22a2a;
+}
+
+/* styling for main container */
+main.main-container {
+    margin: 1em;
+    display: grid;
+}
+
+/* styling for header text */
+main .header-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    color: var(--darkest-color);
+}
+
+/* styling for display container */
+main .display-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1em;
+}
+
+main .display-container h1 {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--foreground-color);
+    background-color: var(--dark-color);
+}
+
+/* styling for input container */
+main .input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2em;
+    color: var(--foreground-color);
+}
+
+main .input-container .player-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    border: 1px solid var(--foreground-color);
+    background-color: var(--medium-color);
+}
+
+/* targets last h1 tag for bottom border */
+
+main .player-input h1:nth-child(n + 2) {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid var(--foreground-color);
+}
+
+/* game functionality styling */
+.active {
+    border: 1px solid var(--highlight-color);
+}
