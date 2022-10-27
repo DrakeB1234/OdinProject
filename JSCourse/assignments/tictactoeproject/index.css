@@ -14,7 +14,7 @@ body {
     --dark-color: #A04668;
     --medium-color: #ce6d8a;
     --foreground-color: #f8f0fc;
-    --highlight-color: #f22a2a;
+    --highlight-color: #8bf22a;
 }
 
 /* styling for main container */
@@ -49,22 +49,35 @@ main .display-container h1 {
 /* styling for input container */
 main .input-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 2em;
+    margin-top: 4em;
     color: var(--foreground-color);
 }
 
 main .input-container .player-input {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     padding: 0.5em;
-    border: 1px solid var(--foreground-color);
     background-color: var(--medium-color);
 }
 
-/* targets last h1 tag for bottom border */
+/* styling for input button container */
+.input-container .input-btn-container {
+    display: grid;
+    gap: 2em;
+    margin: 4em 0 4em 0;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
 
+.input-container .input-btn-container button {
+    font-size: 2rem;
+    padding: 0.5em;
+    border: 0;
+    background-color: var(--darkest-color);
+    color: var(--foreground-color);
+}
+
+/* targets last h1 tag for bottom border */
 main .player-input h1:nth-child(n + 2) {
     text-align: center;
     width: 100%;
@@ -73,5 +86,15 @@ main .player-input h1:nth-child(n + 2) {
 
 /* game functionality styling */
 .active {
-    border: 1px solid var(--highlight-color);
+    border: 4px solid var(--highlight-color);
+}
+
+/* hides player input if not turn */
+main .input-container .player-input.active-player {
+    display: flex;
+}
+
+/* hides button text if disabled (spot already chosen) */
+main .input-container .input-btn-container button:disabled {
+    font-size: 0;
 }
