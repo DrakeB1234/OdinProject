@@ -17,19 +17,40 @@ body {
     --highlight-color: #8bf22a;
 }
 
-/* styling for main container */
-main.main-container {
-    margin: 1em;
-    display: grid;
+/* styling for intro container */
+intro.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* styling for header text */
-main .header-text {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
+intro .header-text {
+    margin-top: 1em;
+    font-size: 3rem;
     color: var(--darkest-color);
 }
+
+intro button {
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 2.5rem;
+    border: 0;
+    background-color: var(--medium-color);
+    color: var(--foreground-color);
+}
+
+intro button:active {
+    background-color: var(--dark-color);
+}
+
+/* styling for main container */
+main.main-container {
+    display: grid;
+    margin: 1em;
+}
+
+/* styling for start game button */
+
 
 /* styling for display container */
 main .display-container {
@@ -85,8 +106,13 @@ main .player-input h1:nth-child(n + 2) {
 }
 
 /* game functionality styling */
-.active {
-    border: 4px solid var(--highlight-color);
+/* hide unactive container */
+.main-container.hide {
+    display: none;
+}
+
+.intro-container.hide {
+    display: none;
 }
 
 /* hides player input if not turn */

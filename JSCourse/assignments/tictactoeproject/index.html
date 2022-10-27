@@ -9,40 +9,43 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <main class="main-container">
+    <intro id="intro" class="intro-container">
         <h1 class="header-text">TIC-TAC-TOE</h1>
+        <button id="start-game">start game</button>
+    </intro>
+    <main id="main" class="main-container hide">
         <div class="display-container" id="data-get"></div>
         <div class="input-container">
-            <div class="player-input active-player">
+            <div id="player1-input" class="player-input">
                 <h1>Player 1</h1>
                 <h1>O</h1>
                 <h2>Input Controls</h2>
                 <div class="input-btn-container">
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button disabled>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
+                    <button id="input" value="100">+</button>
+                    <button id="input" value="101">+</button>
+                    <button id="input" value="102">+</button>
+                    <button id="input" value="110">+</button>
+                    <button id="input" value="111">+</button>
+                    <button id="input" value="112">+</button>
+                    <button id="input" value="120">+</button>
+                    <button id="input" value="121">+</button>
+                    <button id="input" value="122">+</button>
                 </div>
             </div>
-            <div class="player-input">
+            <div id="player2-input" class="player-input">
                 <h1>Player 2</h1>
                 <h1>X</h1>
                 <h2>Input Controls</h2>
                 <div class="input-btn-container">
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
-                    <button>+</button>
+                    <button id="input" value="200">+</button>
+                    <button id="input" value="201">+</button>
+                    <button id="input" value="202">+</button>
+                    <button id="input" value="210">+</button>
+                    <button id="input" value="211">+</button>
+                    <button id="input" value="212">+</button>
+                    <button id="input" value="220">+</button>
+                    <button id="input" value="221">+</button>
+                    <button id="input" value="222">+</button>
                 </div>
             </div>
         </div>
