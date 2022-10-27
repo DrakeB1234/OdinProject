@@ -13,6 +13,7 @@
             align-items: center;
         }
         input {
+            margin-top: 1em;
             font-size: 2rem;
         }
         button {
@@ -30,19 +31,27 @@
         h1 {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 1em;
             background-color: rgb(91, 217, 91);
             color: rgb(255, 255, 255);
+        }
+        h1 button {
+            margin-left: 0.5em;
+            padding: 0;
+            font-size: 2rem;
+            background-color: rgb(255, 255, 255);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <input type="text" id="add-name" />
+        <button id="add-name-btn">add name</button>
         <input type="text" id="add-color" />
         <button id="add-button">add color</button>
         <button id="change-button">change color</button>
         <div id="data-get">
-            <h1>name</h1>
         </div>
     </div>
 </body>
