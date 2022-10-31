@@ -9,46 +9,29 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <intro id="intro" class="intro-container">
-        <h1 class="header-text">TIC-TAC-TOE</h1>
-        <button id="start-game">start game</button>
-    </intro>
-    <main id="main" class="main-container hide">
-        <div class="display-container" id="data-get"></div>
-        <div class="input-container">
-            <div id="player1-input" class="player-input">
-                <h1>Player 1</h1>
-                <h1>O</h1>
-                <h2>Input Controls</h2>
-                <div class="input-btn-container">
-                    <button id="input" value="100">+</button>
-                    <button id="input" value="101">+</button>
-                    <button id="input" value="102">+</button>
-                    <button id="input" value="110">+</button>
-                    <button id="input" value="111">+</button>
-                    <button id="input" value="112">+</button>
-                    <button id="input" value="120">+</button>
-                    <button id="input" value="121">+</button>
-                    <button id="input" value="122">+</button>
-                </div>
-            </div>
-            <div id="player2-input" class="player-input">
-                <h1>Player 2</h1>
-                <h1>X</h1>
-                <h2>Input Controls</h2>
-                <div class="input-btn-container">
-                    <button id="input" value="200">+</button>
-                    <button id="input" value="201">+</button>
-                    <button id="input" value="202">+</button>
-                    <button id="input" value="210">+</button>
-                    <button id="input" value="211">+</button>
-                    <button id="input" value="212">+</button>
-                    <button id="input" value="220">+</button>
-                    <button id="input" value="221">+</button>
-                    <button id="input" value="222">+</button>
-                </div>
-            </div>
-        </div>
+    <display class="display-container">
+        <h1>Player 1 Turn!</h1>
+    </display>
+    <main id="controls" class="main-container">
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
+        <div id="input-grid" input></div>
     </main>
+    <display class="display-container">
+        <div>
+            <h1>Player 1 Score</h1>
+            <h1>0</h1>
+        </div>
+        <div>
+            <h1>Player 2 Score</h1>
+            <h1>0</h1>
+        </div>
+    </display>
 </body>
 </html>

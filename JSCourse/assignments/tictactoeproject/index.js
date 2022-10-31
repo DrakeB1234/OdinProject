@@ -1,97 +1,66 @@
-// defining game function
 const Game = () => {
-    // board available to both players
-    let board = [
-        [0,0,0],
-        [0,0,0],
-        [0,0,0]
-    ];
+    let board = [];
 
-    const start = () => {
-        let player = 2;
-        const inputs = document.querySelectorAll('.input-btn-container #input');
-        const player1element = document.getElementById('player1-input');
-        const player2element = document.getElementById('player2-input');
-        player1element.classList.add('active-player');
-
-        inputs.forEach(e => {
-            e.addEventListener('click', (e) => {
-                const value = e.explicitOriginalTarget.value;
-                if (player == 1) {
-                    // ensures that the spot isn't chosen already
-                    if (!(move(value[0], value[1], value[2]))) {
-                        player = 1;
-                    }
-                    else {
-                        player1element.classList.add('active-player');
-                        player2element.classList.remove('active-player');
-                        e.explicitOriginalTarget.disabled;
-                        player = 2;   
-                    }
-                }
-                else {
-                    // ensures that the spot isn't chosen already
-                    if (!(move(value[0], value[1], value[2]))) {
-                        player = 2;
-                    }
-                    else {
-                        player1element.classList.remove('active-player');
-                        player2element.classList.add('active-player');
-                        e.explicitOriginalTarget.disabled = true;
-                        player = 1;   
-                    }
-                }
-            });
-        });
+    let player1 = {
+        id : 1,
+        marker : 'X'
     };
 
-    const move = (player, x, y) => {
-        // sets character to player
-        if (player == 1){
-            player = 'O';
-        }
-        else {
-            player = 'X';
-        }
-
-        // plants character on chosen spot if not chosen
-        if (board[x][y] == 0) {
-            board[x][y] = player;
-            console.log(`player '${player}' moves to ${x}, ${y}!`);
-            update();
-            return true;
-        }
-        else {
-            console.log('This spot is already chosen!');
-            return false;
-        }
-    }
-
-    const update = () => {
-        // updates board on user side
-        let html = "";
-
-        board.forEach((e) => {
-            e.forEach((e) => {
-                // if array value is 0 (unset) then print empty tag
-                if (e == 0) {
-                    html += `<h1></h1>`;
-                    return;
-                }
-                // if array is set, then print character
-                html += `<h1>${e}</h1>`;
-            });
-        });
-
-        document.getElementById('data-get').innerHTML = html;
+    let player2 = {
+        id : 2,
+        marker : 'O'
     };
 
-    return { start };
+    let curPlayer = player1.id;
+
+    const gameFunction = (e) => {
+        const target = e.explicitOriginalTarget;
+        console.log(e);
+        if (curPlayer == 1){
+            // changes html
+            target.innerHTML = player1.marker;
+            // adds to array
+            setPlayer();
+            curPlayer = player2.id;
+        }
+        else {
+            // changes html
+            target.innerHTML = player2.marker;
+            // adds to array
+            setPlayer();
+            curPlayer = player1.id;
+        }
+    };
+
+    const setPlayer = () => {
+        // if game is not won
+        const check = checkWin();
+        if (!(check)) {
+            let i = 0;
+            document.querySelectorAll('[input]').forEach(e => {
+                board[i] = e.innerHTML;
+                i++;
+            });
+            console.log(board);
+        }
+    };
+
+    const checkWin = () => {
+        let cur = "";
+        // check for row
+        for (let i = 0; i < 3; i++){
+            cur = board[i];
+            if (board[i + 1] != cur) {
+                alert("no match");
+            }
+        }
+    };
+
+    // sets event listeners
+    document.querySelectorAll('[input]').forEach(e => {
+        e.addEventListener('click', gameFunction, { once:true });
+    });  
 };
 
-document.getElementById('start-game').addEventListener('click', () => {
-    document.getElementById('intro').classList.add('hide');
-    document.getElementById('main').classList.remove('hide');
-    const newGame = Game();
-    newGame.start();
-});
+// input controls
+Game();
