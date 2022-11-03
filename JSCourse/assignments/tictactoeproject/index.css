@@ -25,9 +25,20 @@ body {
     margin-bottom: 2em;
 }
 
-    /* display container children */
-    .display-container > div {
-        margin-right: 2em;
+.win-container {
+    display: flex;
+    justify-content: center;
+}
+        
+
+    /* display container */
+    .display-container > button {
+        display: none;
+        padding: 1em;
+        border: 0;
+        font-size: 2rem;
+        background-color: var(--dark-color);
+        color: var(--foreground-color);
     }
 
 /* main container */

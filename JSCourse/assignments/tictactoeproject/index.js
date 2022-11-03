@@ -1,5 +1,9 @@
 const Game = () => {
-    let board = [];
+    let board = [
+        [0,1,2],
+        [0,1,2],
+        [0,1,2]
+    ];
 
     let player1 = {
         id : 1,
@@ -11,10 +15,10 @@ const Game = () => {
         marker : 'O'
     };
 
+    const playerDis = document.getElementById('player-turn');
     let curPlayer = player1.id;
 
     const gameFunction = (e) => {
-        const playerDis = document.getElementById('player-turn');
         const target = e.explicitOriginalTarget;
         if (curPlayer == 1){
             // changes html
@@ -36,49 +40,114 @@ const Game = () => {
 
     const setPlayer = (player) => {
         // if game is not won
-        let i = 0;
+        let l = 0;
+        let temp = [];
         document.querySelectorAll('[input]').forEach(e => {
-            board[i] = e.innerHTML;
-            i++;
+            temp.push(e.innerHTML);
         });
+
+        for (let i = 0; i < 3; i++){
+            for (let j = 0; j < 3; j++){
+                board[i][j] = temp[l];
+                l++;
+            }
+        }
         checkWin(player);
     };
 
     const checkWin = (player) => {
-        let j = 0;
-        let match = false;
-        for (let i = 0; i < board.length; i+=3){   
-            if (match != false){
-                console.log(`Player ${player.id} Won!`);
-                endGame();
-                return;
-            }
-            let cur = board[i];
-            for (let j = i; j < (i + 3); j++){
-                if (board[j] != cur){
-                    console.log("J: " + board[j] + " cur: " + cur);
-                    match = false;
-                    continue;
+        const winDis = document.getElementById("win-dis");
+        if (checkRow() == true || checkCol() == true || checkCross(player) == true){
+            winDis.innerHTML = `<h1>Player ${player.id} wins!</h1>`;
+            endGame();
+            return;
+        }
+        if (checkFillBoard() == true){
+            winDis.innerHTML = "<h1>Its a tie!</h1>";
+            endGame();
+            return;
+        }
+    }
+
+    const checkRow = () => {
+        for (let i = 0; i < 3; i++){
+            let check = board[i][0];
+            for (let j = 0; j < 3; j++){
+                if (check != board[i][j]){
+                    break;
                 }
-                else {
-                    match = true;
+                else if (j == 2 && check == board[i][j] && board[i][j] != ""){
+                    return true;
                 }
             }
         }
+        return false;
     };
+
+    const checkCol = () => {
+        for (let i = 0; i < 3; i++){
+            let check = board[0][i];
+            for (let j = 0; j < 3; j++){
+                if (check != board[j][i]){
+                    break;
+                }
+                else if (j == 2 && check == board[j][i] && board[j][i] != ""){
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
+
+    const checkCross = (player) => {
+        // ensures that no empty spaces in board
+        if(board[0][0] == player.marker && board[1][1] == player.marker && board[2][2] == player.marker){
+            return true;
+        }
+        if(board[0][2] == player.marker && board[1][1] == player.marker && board[2][0] == player.marker){
+            return true;
+        }
+        return false;
+    }
+
+    const checkFillBoard = () => {
+        let check = 0;
+        for (let i = 0; i < 3; i++){
+            for (let j = 0; j < 3; j++){
+                if (board[i][j] != ""){
+                    check++;
+                }
+            }
+        }
+        if (check >= 9){
+            return true;
+        }
+        return false;
+    }
 
     const endGame = () => {
         // removes event listeners if game won
         document.querySelectorAll('[input]').forEach(e => {
             e.removeEventListener('click', gameFunction, { once:true });
         });  
+
+        document.getElementById("reset-btn").style.display = "block";
     };
 
     // sets event listeners
     document.querySelectorAll('[input]').forEach(e => {
         e.addEventListener('click', gameFunction, { once:true });
-    });  
+    });
 };
 
 // input controls
 Game();
+
+document.getElementById("reset-btn").addEventListener('click', (e) => {
+    document.querySelectorAll('[input]').forEach(e => {
+        e.innerHTML = "";
+    });
+    document.getElementById("win-dis").innerHTML = "";
+    e.explicitOriginalTarget.style.display = "none";
+    Game();
+});
