@@ -138,11 +138,12 @@ header.container {
 /* action container */
 action.container {
     display: flex;
+    align-items: center;
     gap: 3em;
     margin: 4em;
     padding: 2em 7em 2em 7em;
     background-color: var(--blue);
-    border-radius: 3% / 15%;
+    border-radius: 1% / 5%;
 }
 
     action.container .action-container {
@@ -164,6 +165,19 @@ action.container {
         font-size: 0.8rem;
     }
 
-    action.container .action-container:nthchild(n + 2) button{
+    action.container .action-container button{
+        padding: 0.2em 2em 0.2em 2em;
+        color: white;
+        border-radius: 5%/ 10%;
+        border: 1px solid white;
         background-color: var(--blue);
     }
+
+/* footer container */
+footer.container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 2em 0;
+    color: white;
+    background-color: var(--grey);
+}
