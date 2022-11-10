@@ -1,0 +1,104 @@
+<svg width="179" height="300" viewBox="0 0 179 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    #cable {
+        animation: cableMove 6s infinite;
+    }
+
+    @keyframes cableMove {
+        0% {
+            transform: translateY(15%);
+        }
+        20% {
+            transform: translateY(-15%);
+        }
+        70% {
+            transform: translateY(-15%);
+        }
+        100% {
+            transform: translateY(15%);
+        }
+    }
+
+    #bulb-glow {
+        animation: bulbGlow 6s infinite;
+    }
+
+    @keyframes bulbGlow {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        40% {
+            opacity: 0.7;
+        }
+        50% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0.7;
+        }
+        70% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    #top-component {
+        animation: componentGlow 6s infinite;
+    }
+
+    @keyframes componentGlow {
+        0% {
+            fill:#B5B5B5;
+        }
+        80% {
+            fill:#f79b45;
+        }
+        100% {
+            fill:#B5B5B5;
+        }
+    }
+</style>
+<g id="bulb-icon" clip-path="url(#clip0_1_2)">
+<g id="cable">
+<path id="Rectangle 6" d="M80 280C80 283.314 82.6863 286 86 286H91C94.3137 286 97 283.314 97 280V271C97 270.448 96.5523 270 96 270H81C80.4477 270 80 270.448 80 271V280Z" fill="#9A9A9A"/>
+<rect id="Rectangle 10" x="81" y="256" width="15" height="14" fill="#F4EDED"/>
+<rect id="Rectangle 13" x="87" y="268" width="3" height="1" fill="#ECE9D9"/>
+<rect id="Rectangle 12" x="91" y="263" width="3" height="3" fill="#817A7A"/>
+<rect id="Rectangle 11" x="83" y="263" width="3" height="3" fill="#817A7A"/>
+<path id="Rectangle 9" d="M86 286H91V293C91 293.552 90.5523 294 90 294H87C86.4477 294 86 293.552 86 293V286Z" fill="#9A9A9A"/>
+<path id="Rectangle 10_2" d="M87 294H90V379H87V294Z" fill="#9A9A9A"/>
+</g>
+<g id="bulb-top">
+<path id="bulb" d="M131.186 132.091C131.186 194.818 112.178 194.818 88.732 194.818C65.2855 194.818 46.2784 194.818 46.2784 132.091C46.2784 97.4476 65.2855 12.9091 88.732 12.9091C112.178 12.9091 131.186 97.4476 131.186 132.091Z" fill="white" fill-opacity="0.8"/>
+<path id="bulb-glow" d="M169 134.931C169 217 133.407 217 89.5 217C45.5934 217 10 217 10 134.931C10 89.6056 45.5934 -21 89.5 -21C133.407 -21 169 89.6056 169 134.931Z" fill="#F8FFCD" fill-opacity="0.2"/>
+</g>
+<g id="bulb-base">
+<rect id="Rectangle 1" width="60.0206" height="7.90909" rx="3" transform="matrix(1 0 0 -1 58 223.909)" fill="#9A9A9A"/>
+<rect id="Rectangle 4" width="60" height="8" rx="3" transform="matrix(1 0 0 -1 58 201)" fill="#B5B5B5"/>
+<rect id="Rectangle 3" width="60.0206" height="7.90909" rx="3" transform="matrix(1 0 0 -1 58 208.909)" fill="#9A9A9A"/>
+<rect id="Rectangle 5" width="60.0206" height="7.90909" rx="3" transform="matrix(1 0 0 -1 57.9897 193.5)" fill="#9A9A9A"/>
+<rect id="Rectangle 2" width="60" height="7" rx="3" transform="matrix(1 0 0 -1 58 216)" fill="#B5B5B5"/>
+<path id="Rectangle 6_2" d="M62 225C62 228.314 64.6863 231 68 231H108C111.314 231 114 228.314 114 225V224H62V225Z" fill="#F3EDED"/>
+</g>
+<g id="bulb-top-components">
+<path id="Rectangle 8" d="M101.907 135.5H99.8577L91.6598 160.833V185.591H93.7093V160.833L101.907 135.5Z" fill="#B5B5B5"/>
+<path id="Rectangle 7" d="M75.5567 135.5H77.6062L85.8041 160.833V185.591H83.7546V160.833L75.5567 135.5Z" fill="#B5B5B5"/>
+<ellipse id="Ellipse 2" cx="88.732" cy="168.455" rx="4.39175" ry="3.95455" fill="#9A9A9A"/>
+<ellipse id="Ellipse 3" cx="88.732" cy="168.455" rx="1.46392" ry="1.31818" fill="#B5B5B5"/>
+<path id="top-component" d="M75.5567 134.841L85.8041 131.545L88.732 130.886L91.6598 131.545L101.907 134.841V135.5H99.7113L91.6598 132.864L88.732 132.205L85.8041 132.864L77.7526 135.5H75.5567V134.841Z" fill="#B5B5B5"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="179" height="300" fill="white"/>
+</clipPath>
+</defs>
+</svg>
