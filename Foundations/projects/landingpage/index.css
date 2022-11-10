@@ -29,7 +29,7 @@ a {
 nav.container {
     display: flex;
     gap: 2em;
-    padding: 1em 5em 1em 5em;
+    padding: 1em 0 1em 0;
     background-color: var(--grey);
     color: white;
 }
@@ -37,14 +37,24 @@ nav.container {
        flex: 2;
     }
 
+    nav.container h1 {
+        margin-left: 10%;
+    }
+
     nav.container h2 {
         font-size: 0.8rem;
+    }
+
+    nav.container h2:last-child {
+        margin-right: 5%;
     }
 
 /* intro container */
 intro.container {
     display: flex;
-    padding: 4em 6em 4em 6em;
+    padding: 4em 0 4em 0;
+    width: clamp(10em, 100%, 100em);
+    margin: 0 auto 0 auto;
     background-color: var(--grey);
 }
 
@@ -55,6 +65,7 @@ intro.container {
 
     /* target first item */
     intro.container .intro-item:first-child {
+        margin-left: 6%;
         margin-right: 2em;
         color: white;
     }
@@ -68,7 +79,6 @@ intro.container {
             font-size: 0.8rem;
         }
 
-
         intro.container .intro-item:first-child button {
             margin-top: 0.5em;
             padding: 0.4em 2em 0.4em 2em;
@@ -80,6 +90,7 @@ intro.container {
     
     /* targets second item */
     intro.container .intro-item:nth-child(n + 2){
+        margin-right: 6%;
         display: flex;
         justify-content: center;
     }
@@ -93,6 +104,7 @@ article.container {
 }
     /* header text */
     article.container > h1 {
+        text-align: center;
         margin: 1em 0 1em 0;
         font-size: 2rem;
         color: var(--grey);
@@ -120,7 +132,7 @@ article.container {
 header.container {
     display: flex;
     flex-direction: column;
-    padding: 4em 14em 4em 14em;
+    padding: 4em 5% 4em 5%;
     background-color: var(--light-grey);
 }
 
@@ -140,8 +152,8 @@ action.container {
     display: flex;
     align-items: center;
     gap: 3em;
-    margin: 4em;
-    padding: 2em 7em 2em 7em;
+    margin: 4em 5% 4em 5%;
+    padding: 2em 5% 2em 5%;
     background-color: var(--blue);
     border-radius: 1% / 5%;
 }
