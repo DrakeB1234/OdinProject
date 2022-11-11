@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5 {
 }
 
 :root {
-    --dark-grey:rgb(41, 52, 71)e;
+    --dark-grey:rgb(41, 52, 71);
     --grey: #3a475e;
     --medium-grey: #666c78;
     --light-grey: #e9e9ec;
@@ -28,32 +28,32 @@ a {
 /* nav container */
 nav.container {
     display: flex;
+    align-items: center;
     gap: 2em;
     padding: 1em 0 1em 0;
-    background-color: var(--grey);
+    background-color: var(--dark-grey);
     color: white;
 }
-    nav.container h1:first-child {
-       flex: 2;
+    nav.container img{
+       margin-left: 1em;
+       margin-right: auto;
+       width: 3em;
     }
 
-    nav.container h1 {
-        margin-left: 10%;
+    nav.container a {
+        font-size: 1rem;
     }
 
-    nav.container h2 {
-        font-size: 0.8rem;
-    }
-
-    nav.container h2:last-child {
+    nav.container a:last-child {
         margin-right: 5%;
     }
+
 
 /* intro container */
 intro.container {
     display: flex;
     padding: 4em 0 4em 0;
-    width: clamp(10em, 100%, 100em);
+    width: clamp(10em, 100%, 110em);
     margin: 0 auto 0 auto;
     background-color: var(--grey);
 }
@@ -75,12 +75,28 @@ intro.container {
             font-size: 2.5rem;
         }
 
+        intro.container .intro-item:first-child h1 strong {
+            font-size: 3rem;
+            background: linear-gradient(140deg, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: 1s gradientText infinite;
+        }
+
+            /* animation for gradient text */
+            @keyframes gradientText {
+                0%{background-position:10% 0%}
+                50%{background-position:91% 100%}
+                100%{background-position:10% 0%}
+            }
+
         intro.container .intro-item:first-child h2 {
+            margin-top: 0.5em;
             font-size: 0.8rem;
         }
 
         intro.container .intro-item:first-child button {
-            margin-top: 0.5em;
+            margin-top: 0.8em;
             padding: 0.4em 2em 0.4em 2em;
             border-radius: 10% / 20%;
             background-color: var(--blue);
